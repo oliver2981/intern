@@ -4,9 +4,17 @@ GitHub&GitLab 基础使用
 ### **1. GitHub 基础使用**
 1. **核心操作**  
    
-   - `git clone`：克隆远程仓库  
+   - `git clone`：克隆远程仓库
+   
+     例：  `git clone git@github.com:your_username/project_name.git`
+     
+   - `git branch feature`: 创建本地分支
+   
    - `git add/commit/push`：提交代码到个人分支  
+   
    - `git pull`：同步远程变更  
+   
+     ![图1-1](iamges/QQ_1752735191130.png)
    
 2. **Pull Request (PR) 流程**  
    ```mermaid
@@ -14,7 +22,7 @@ GitHub&GitLab 基础使用
      A[Fork主仓库] --> B[创建特性分支]
      B --> C[提交代码到个人仓库]
      C --> D[发起PR到主仓库]
-     D --> E[团队审核+讨论]
+     D --> E[审核]
      E --> F[合并到主分支]
    ```
    - **关键点**：PR用于向他人仓库提交变更，需通过Review后合并。
@@ -37,16 +45,7 @@ GitHub&GitLab 基础使用
 
 ---
 
-### **3. 核心对比**  
-| 功能                | GitHub (PR)               | GitLab (MR)               |
-|---------------------|---------------------------|---------------------------|
-| **触发条件**        | 跨仓库/Fork后提交         | 同仓库分支间提交          |
-| **集成能力**        | 依赖第三方CI（如Actions） | 原生CI/CD支持             |
-| **权限控制**        | 依赖仓库设置              | 支持更细粒度的分支保护    |
-
----
-
-### **4. 操作示例**  
+### **3. 操作示例**  
 - **GitHub PR**：  
   ```bash
   git checkout -b feature
